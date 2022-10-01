@@ -19,7 +19,7 @@ ll mulmod(ll a, ll b, ll c) {
 }
 ll powMbig(ll a, ll b, ll m){
   if (a <= 0)return 0; 
-  ll ans = 1LL,a=a%m;
+  ll ans = 1LL;a%=m;
   while (b){
     if (b & 1) ans = mulmod(ans, a, m);
     a = mulmod(a, a, m),b >>= 1;
