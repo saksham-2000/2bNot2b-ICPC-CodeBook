@@ -6,6 +6,7 @@ using namespace std;
 #define ld long double
 #define pll pair<ll,ll>
 #define vl vector<ll>
+#define vpll vector<pll>
 #define vvl vector<vector<ll>>
 #define pb push_back
 #define PI acos(-1)
