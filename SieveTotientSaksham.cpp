@@ -1,6 +1,6 @@
 const ll N = 2e5 + 5;
 ll phi[N],sp[N];
-void fill_totient(ll N) {
+void fill_totient(ll N) { // totient(x): cnt of numbers <x rel. prime to x
   for (ll i = 2; i < N; i++)phi[i] = i;
     for (ll i = 2; i < N; i++) {
       if (phi[i] == i) {
@@ -10,7 +10,7 @@ void fill_totient(ll N) {
       }
     }
   }
-  void fill_sieve(ll N) {
+  void fill_sieve(ll N) { // sp[x] : smallest prime factor of x
     for (ll i = 1; i < N; i++)sp[i] = i;
       for (ll i = 2; i < N; i++) {
         if (sp[i] == i) {
