@@ -14,7 +14,7 @@ ll sum(ll i) { // find sum for range [1..i]
 }
 ll find_kth_one(ll k) { // find position of kth one
   ll pos = 0, ret = 0, n=sz(bit);
-  for (ll i = 20; i >= 0; i--) {
+  for (ll i = 25; i >= 0; i--) {
     if (pos + (1ll << i) < n && ret + bit[pos + (1ll << i)] < k) {
       ret += bit[pos + (1ll << i)];
       pos += 1ll << i;
