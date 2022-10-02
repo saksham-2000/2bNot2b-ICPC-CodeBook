@@ -1,3 +1,4 @@
+//  pi[i]: Len. of longest 'proper' prefix of substr of s[0...i] which is also it's suffix
 vector<int> prefix_function(string s) { // KMP
     int n = (int)s.length();
     vector<int> pi(n);
