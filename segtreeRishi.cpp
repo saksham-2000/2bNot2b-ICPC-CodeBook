@@ -1,11 +1,10 @@
-// change unite, ret accordingly, this is for sum query
 template <class T>
 struct segtree {
     ll n; T ret;
     vector<T> t;
     T unite(T x, T y) {
         return x + y;
-    }
+    }// change unite, ret accordingly, this is for sum query
     void build(vector<T> &arr, ll v, ll tl, ll tr) {
         if (tl == tr) {
             t[v] = arr[tl];
@@ -36,14 +35,12 @@ struct segtree {
         ll tm = (tl + tr) / 2;
         return unite(get(2 * v, tl, tm, l, r), get((2 * v) + 1, tm + 1, tr, l, r));
     }
-
     void modify(ll pos, T val) {
         modify(1, 0, n - 1, pos, val);
     }
     T get(ll l, ll r) {
         return get(1, 0, n - 1, l, r);
     }
-
     segtree(ll _n) {
         n = _n;
         ret = 0;
