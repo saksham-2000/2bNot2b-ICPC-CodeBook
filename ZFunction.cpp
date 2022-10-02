@@ -1,3 +1,4 @@
+// z[i]:  Max. # of char's starting from the pos 'i' that coincide with first few char's of s
 vector<int> z_function(string s) {
     int n = (int) s.length();
     vector<int> z(n);
