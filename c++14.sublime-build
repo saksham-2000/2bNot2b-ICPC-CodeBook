@@ -4,3 +4,5 @@
 "shell": true,
 "working_dir" : "$file_path"
 }
+// g++ helloworld.cpp -o hello
+// ./hello <input.txt>output.txt
