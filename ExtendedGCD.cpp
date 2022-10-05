@@ -12,3 +12,14 @@ ll extended_gcd(ll a, ll b, ll& x, ll& y) {
     x = y1,y = x1 - y1 * (a / b);
     return d;
 }
+ll x, y;
+// ax+my=1, take %m both sides.
+g = extended_euclidean(a, m, x, y);
+// finding [a]^-1 % m (m not necessarily prime)
+if (g != 1) {
+    cout << "No solution!";
+}
+else {
+    x = (x % m + m) % m;
+    cout << x << endl;
+}
