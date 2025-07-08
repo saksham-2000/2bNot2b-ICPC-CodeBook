@@ -55,3 +55,17 @@ bool MillerRabin(long long n, int iter=5) { // returns true if n is probably pri
     }
     return true;
 }
+
+
+// Primality test in logN time (non-deterministic)
+bool fermatprime(ll x) {
+  if (x <= 3)return (x == 2 || x == 3);
+  for (ll iter = 0; iter < 20; iter++) {
+    ll a = rng() % (x - 3) + 2; // random base in [2,x-2]
+    ll temp = powMbig(a, x - 1, x);
+    if (temp != 1) {
+      return false;
+    }
+  } // Beware ! Can lead to 'psuedo' primes.
+  return true;
+}
