@@ -1,4 +1,6 @@
 // find shortest dist. from v to all other vertices.
+// works for negative weights unlike dijsktra
+// O(n*m)
 void solve(){
     vector<int> d (n, INF);
     d[v] = 0;
