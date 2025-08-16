@@ -1,5 +1,9 @@
-/* Given directed/undirected weighted(neg. too) graph.
-Find the len. of shortest path b/w any pair */
+// multiple source shortest path  O(n^3)
+
+/* 
+Given directed/undirected weighted graph.
+Find the len. of shortest path b/w any pair
+*/
 for (int k = 0; k < n; ++k) {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
@@ -8,4 +12,4 @@ d[i][j] = min(d[i][j], d[i][k] + d[k][j]);
         }
     }
 }
-// Algo doesnt apply for neg. weight cycles.
+// Algo works for negative weights (unlike dijsktra) but NOT negative cycles.
